@@ -40,7 +40,6 @@ function retImg = autoescala(grayImg)
     end
   end
   
-  
 endfunction
 
 %Funcao para aplicar a quantizacao
@@ -74,10 +73,8 @@ function retImg = quantizacao(grayImg)
       if retImg(i,j) < 0
           retImg(i,j) = 0;
       end
-      
     end
   end
-  
   
 endfunction
 
@@ -109,11 +106,10 @@ function retImg = spliting(grayImg, limiar)
       %Verifica se houve underflow
       if retImg(i,j) < 0
           retImg(i,j) = 0;
-      end
-      
+      end 
     end
   end
- 
+  
 endfunction
 
 %Funcao que aplica a binarizacao
@@ -131,10 +127,10 @@ function retImg = binariza(grayImg, limiar)
         retImg(i,j) = 255;
       else
         retImg(i,j) = 0;
-      end
-      
+      end 
     end
   end
+  
 endfunction
 
 %Funcao que faz todos os processamentos e exibe na tela
@@ -198,12 +194,9 @@ function execProcess(imgName, limiar)
   
 endfunction
 
-%Executa o porcessamento das imagens
+%Executa o processamento das imagens
 execProcess('rice.png', 110);
 execProcess('mamografia.bmp', 45);
 execProcess('batatas.tif', 100);
 execProcess('solda.bmp', 180);
 execProcess('laranjas.bmp', 125);
-
-
-
